@@ -1,6 +1,3 @@
-// Traffic Light
-
-// Pin definitions
 const int redPin = 7;       // Red LED
 const int yellowPin = 6;    // Yellow LED
 const int greenPin = 5;     // Green LED
@@ -13,27 +10,19 @@ const int greenTime = 5000;      // 5 seconds
 const int buttonGreenTime = 5000; // Green stays on 5 seconds
 
 void setup() {
-  // Set LED pins as OUTPUT
+   // Set LED pins as OUTPUT
   pinMode(redPin, OUTPUT);
   pinMode(yellowPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
 
   
   pinMode(buttonPin, INPUT_PULLUP);
+
 }
 
 void loop() {
-  // check if pushbutton is pressed
-  if (digitalRead(buttonPin) == LOW) {
-   // if pushbutton pressed turn green
-    digitalWrite(redPin, LOW);
-    digitalWrite(yellowPin, LOW);
-    digitalWrite(greenPin, HIGH);
-    delay(buttonGreenTime); // Keep green for button duration
-  } else {
-    // stoplight functionality
-    
-    //turn on red light
+  // put your main code here, to run repeatedly:
+//turn on red light
     digitalWrite(redPin, HIGH);
     digitalWrite(yellowPin, LOW);
     digitalWrite(greenPin, LOW);
@@ -50,5 +39,4 @@ void loop() {
     digitalWrite(yellowPin, LOW);
     digitalWrite(greenPin, HIGH);
     delay(greenTime);
-  }
 }
